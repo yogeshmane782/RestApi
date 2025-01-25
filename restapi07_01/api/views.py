@@ -8,7 +8,7 @@ class CreateStudView(View):
     def post(self,request,*args,**kwargs):
         stud=StudentForm(request.POST)
         try:
-              if stud.is_valid():
+            if stud.is_valid():
                 stud.save(commit=True)
                 response=HttpResponse(json.dumps({'msg':'student created'}),content_type="application/json",status=200)
         except:
