@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from api.models import Student
 class StudentSerializer(serializers.Serializer):
-    rollno=serializers.ImageField()
+    rollno=serializers.IntegerField()
     name=serializers.CharField(max_length=20)
     course=serializers.CharField(max_length=15)
     fee=serializers.FloatField()
