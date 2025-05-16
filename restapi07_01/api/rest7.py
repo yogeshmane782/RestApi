@@ -12,8 +12,8 @@ stud={'rollno':rollno,
       'course':course,
       'fee':fee}
 response=requests.post(BASE_URL+END_POINT,data=stud)
-stutuscode=response.status_code
-if stutuscode==200:
+statuscode=response.status_code
+if statuscode==200:
     print(response.json())
 else:
     print(response.json())
